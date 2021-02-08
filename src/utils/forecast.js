@@ -12,7 +12,8 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             const temperature = body.current.temperature;
             const rain = body.current.precip;
-            callback(undefined, "It is currently " + temperature + " degrees out, chance of rain is " + rain + "%") 
+            const humidity = body.current.humidity;
+            callback(undefined, "It is currently " + temperature + " degrees out, chance of rain is " + rain + "%. The humidity is " + humidity + "%.") 
         }
     }) 
 }
